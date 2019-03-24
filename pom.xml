@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.mariazevedo88</groupId>
   <artifactId>json-formatter-validator-java7</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   
   <name>json-formatter-validator-java7</name>
   <description>A java 7 version of the original project json-formatter-validator</description>
