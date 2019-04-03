@@ -171,6 +171,34 @@ public class CustomJSONFormatterTest{
 		assertTrue(jsonElement.isJsonPrimitive()); //JsonPrimitive = primitive types and Java types
 	}
 	
+	@Test
+	public void getJSONObjectWithDoubleCommaAndSpaceValue() throws IOException {
+		String jsonWithDoubleCommaAndSpace = "{id:268852005101,productCode:02-688520051,address:{street:Rua B,number:666,additionalInfo:Apto 666 , Bloco 1 ,,reference:Organizacoes Tabajara,neighborhood:Tabajara,city:São Paulo,state:SP,zipcode:12345678}}";
+		JsonObject json = formatter.checkValidityAndFormatObject(jsonWithDoubleCommaAndSpace);
+		assertTrue(json.isJsonObject());
+	}
+	
+	@Test
+	public void getJSONObjectWithOnlyHoursAsString() throws IOException {
+		String jsonWithOnlyHoursAsString = "{id:268862679704,productCode:02-688626797,purchaseDate:2019-02-03,address:{street:Rua Cinco,number:240,additionalInfo:Teste,reference:Ao lado lotus, Recebimento 7:15 as 17:00,neighborhood:Centro,city:Lavras,state:MG,zipcode:00000000}}";
+		JsonObject json = formatter.checkValidityAndFormatObject(jsonWithOnlyHoursAsString);
+		assertTrue(json.isJsonObject());
+	}
+	
+	@Test
+	public void getJSONObjectWithParenthesesWronglyPlaced() throws IOException {
+		String jsonWithParenthesesWronglyPlaced = "{id:266861122901,productCode:02-668611229,address:{street:Rua Teste,number:22,additionalInfo:Apto 01,reference:Em frente a padaria ( a casa nao tem porteiro, ou campainha) ligar avisando que chegou,neighborhood:Teste,city:Lavras,state:MG,zipcode:37200000}}";
+		JsonObject json = formatter.checkValidityAndFormatObject(jsonWithParenthesesWronglyPlaced);
+		assertTrue(json.isJsonObject());
+	}
+	
+	@Test
+	public void getJSONObjectWithColonWronglyPlaced() throws IOException {
+		String jsonWithColonWronglyPlaced = "{id:268856993701,productCode:02-688569937,purchaseDate:2019-02-02,address:{street:Rua Pachecao,number:2019,additionalInfo:casa FRENTE. 21965307587,reference:depois do ponto de onibus 666, no seguno numero. Procurar fulano  TELE: 35 981149567 .,neighborhood:Jardim Floresta,city:Lavras,state:MG,zipcode:37200000}}";
+		JsonObject json = formatter.checkValidityAndFormatObject(jsonWithColonWronglyPlaced);
+		assertTrue(json.isJsonObject());
+	}
+	
 	@After
 	public void tearDown() {
 		formatter = null;
