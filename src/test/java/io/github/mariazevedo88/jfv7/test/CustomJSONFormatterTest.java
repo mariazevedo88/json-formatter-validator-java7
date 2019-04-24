@@ -18,6 +18,7 @@ import org.junit.Test;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
+import com.google.gson.JsonSyntaxException;
 
 import io.github.mariazevedo88.jfv7.JsonFormatterValidatorApplication;
 import io.github.mariazevedo88.jfv7.formatter.CustomJSONFormatter;
@@ -271,6 +272,14 @@ public class CustomJSONFormatterTest{
 		assertNull(json);
 	}
 	
+	@Test(expected = JsonSyntaxException.class)
+	public void removeAttributesWithException() throws IOException {
+		String jsonToRemove = "{id:265998308001,productCode:02-659983080,purchaseDate:2018-01-17,customer:{pf:{cpf:012345678,name:Mariana},deliveryAddress:{street:Rua Fechada,number:666,additionalInfo:casa,reference:nos fundos do armazem,neighborhood:Lavras,city:Lavras,state:MG,zipcode:01234000},telephones:{main:{ddd:35,number:38222482},secondary:{ddd:35,number:38222482},business:{ddd:35,number:38222482}}},payer:{pf:{cpf:012345678,name:Mariana},birthDate:1988-07-22,billingAddress:{street:Rua Fechada,number:22,additionalInfo:casa da rua (error},reference:em Frente a Praca Agusto Silva,neighborhood:Lavras,city:Lavras,state:MG,zipcode:24415040},business:{ddd:35,number:38222482}}},totalAmount:183.98}";
+		logger.info("Invalid json with string to remove: " + jsonToRemove);
+		String[] remove = {"customer", "payer"};
+		String jsonFormatted = formatter.removeJSONObjectsFromString(jsonToRemove, remove);
+		formatter.checkValidityAndFormatObject(jsonFormatted, false, false);
+	}
 	
 	@After
 	public void tearDown() {
