@@ -99,7 +99,7 @@ You must import .jar into the classpath of your project. If your project is a ma
 <dependency>
   <groupId>io.github.mariazevedo88</groupId>
   <artifactId>json-formatter-validator-java7</artifactId>
-  <version>2.0.2</version>
+  <version>2.0.3</version>
 </dependency>
 ```
 

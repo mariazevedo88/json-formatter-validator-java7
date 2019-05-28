@@ -51,7 +51,7 @@
 		<connection>scm:git:git://github.com/mariazevedo88/json-formatter-validator-java7.git</connection>
 		<developerConnection>scm:git:git@github.com:mariazevedo88/json-formatter-validator-java7.git</developerConnection>
 		<url>https://github.com/mariazevedo88/json-formatter-validator-java7</url>
-		<tag>json-formatter-validator-java7-2.0.1</tag>
+		<tag>json-formatter-validator-java7-2.0.2</tag>
 	</scm>
 	
 	<distributionManagement>
