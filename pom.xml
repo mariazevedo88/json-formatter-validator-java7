@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.mariazevedo88</groupId>
   <artifactId>json-formatter-validator-java7</artifactId>
-  <version>2.0.3</version>
+  <version>2.0.4-SNAPSHOT</version>
   
   <name>json-formatter-validator-java7</name>
   <description>A java 7 version of the original project json-formatter-validator</description>
@@ -51,7 +51,7 @@
 		<connection>scm:git:git://github.com/mariazevedo88/json-formatter-validator-java7.git</connection>
 		<developerConnection>scm:git:git@github.com:mariazevedo88/json-formatter-validator-java7.git</developerConnection>
 		<url>https://github.com/mariazevedo88/json-formatter-validator-java7</url>
-		<tag>json-formatter-validator-java7-2.0.3</tag>
+		<tag>json-formatter-validator-java7-2.0.2</tag>
 	</scm>
 	
 	<distributionManagement>
