@@ -262,7 +262,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>${maven.release.plugin.version}</version>
+				<version>${maven.release.plugin.version}</version><!--$NO-MVN-MAN-VER$-->
 				<configuration>
 					<localCheckout>true</localCheckout>
 					<pushChanges>false</pushChanges>
