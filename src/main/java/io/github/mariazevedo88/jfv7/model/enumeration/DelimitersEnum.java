@@ -1,4 +1,4 @@
-package io.github.mariazevedo88.jfv7.enumeration;
+package io.github.mariazevedo88.jfv7.model.enumeration;
 
 public enum DelimitersEnum {
 	

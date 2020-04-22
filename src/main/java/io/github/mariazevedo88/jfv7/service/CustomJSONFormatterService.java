@@ -11,8 +11,8 @@ import org.apache.log4j.Logger;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 
-import io.github.mariazevedo88.jfv7.enumeration.DelimitersEnum;
 import io.github.mariazevedo88.jfv7.model.CustomJSON;
+import io.github.mariazevedo88.jfv7.model.enumeration.DelimitersEnum;
 
 /**
  * Class that verify a JSON and format in cases of invalid JSON

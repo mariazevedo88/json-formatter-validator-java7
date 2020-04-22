@@ -1,6 +1,6 @@
 package io.github.mariazevedo88.jfv7.service;
 
-import io.github.mariazevedo88.jfv7.enumeration.DelimitersEnum;
+import io.github.mariazevedo88.jfv7.model.enumeration.DelimitersEnum;
 
 /**
  * Class with method that verify, validates and filters a JSON
